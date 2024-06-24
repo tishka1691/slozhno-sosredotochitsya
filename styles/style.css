@@ -1,5 +1,156 @@
-/* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
-
 .page {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  z-index: 1;
+  max-height: 768px;
+  height: 100%;
+  max-width: 1024px;
+  width: 100%;
+  background-image: url(../images/cover-image-dark.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
   /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
 }
+
+/* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
+
+.header {
+  height: 100%;
+  width: 100%;
+  padding: 20px 0 0;
+}
+
+
+
+.decorated-zone {
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+/* .header__theme-menu {
+} */
+
+.header__theme-menu-list {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  
+}
+
+.header__theme-menu-item {
+  font-family: 'IBM Plex Mono', sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 18px;
+  text-align: center;
+}
+
+.header__theme-menu-button {
+  
+  border: 1px solid transparent;
+  padding: 2px 13px;
+  color: var(--accent-color);
+  line-height: 18px;
+  text-transform: lowercase;
+  background: transparent;
+  cursor: pointer;
+}
+
+.header__theme-menu-button_active {
+  border: 1px solid #ff0070;
+}
+
+/* .header__theme-menu-button_type_dark {
+  border: 1px solid #ff0070;
+} */
+
+
+.rec {
+  display: flex;
+  position: absolute;
+  top: 5px;
+  right: 29px;
+  align-items: center;
+  gap: 10px;
+}
+
+.bulb {
+  color: var(--accent-color,#FF0070);
+  font-family: 'IBM Plex Mono', sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 18px;
+  text-align: center;
+}
+
+.elips {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background-color: var(--accent-color,#FF0070);
+  box-shadow: 0px 0px 4px 2px #FF0070;
+}
+
+.corner {
+  position: relative;
+  
+}
+
+.corner::before,
+.corner::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  inline-size: 25px;
+  block-size: 25px;
+}
+
+.corner::before {
+  border-inline-end: 1px solid var(--secondary-color, #ff0070);
+  border-block-start: 1px solid var(--secondary-color, #ff0070);
+  inset-inline-end: clamp(10px, 0.0286rem + 2.5445vw, 20px);
+  inset-block-start: clamp(10px, 0.0286rem + 2.5445vw, 20px);
+}
+
+.corner::after {
+  border-inline-start: 1px solid var(--secondary-color, #ff0070);
+  border-block-end: 1px solid var(--secondary-color, #ff0070);
+  inset-inline-start: clamp(10px, 0.0286rem + 2.5445vw, 20px);
+  inset-block-end: clamp(10px, 0.0286rem + 2.5445vw, 20px);
+}
+
+.cover {
+  display: flex;
+  font-family: 'IBM Plex Mono', sans-serif;
+  font-weight: 700;
+  line-height: 129.53px;
+  text-align: left;
+  color: #DB00FF;
+  text-shadow: 4px 4px 0 var(--accent-color);
+  font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+  padding-block-start: 273px;
+}
+
+.title {
+  display: flex;
+  justify-content: flex-end;
+  inline-size: 491px;
+  font-family: 'IBM Plex Mono', sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 23.4px;
+  text-align: left;
+  margin-block-start: 114px; 
+  margin-block-end: 134px;
+  
+}
+
+.title-decor {
+  color: var(--marker-color, #000028);
+  background: var(--accent-color, #ff0070);
+}
+
+
