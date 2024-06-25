@@ -1,9 +1,6 @@
 .page {
   display: flex;
   flex-direction: column;
-  background-image: var(--background-image);
-  background-size: 100% 100%;
-  background-repeat: repeat-x;
 
   /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
 }
@@ -13,15 +10,49 @@
 .header {
   height: 100%;
   width: 100%;
+  background-image: var(--background-image);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
 }
 
 .decorated-zone {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   position: relative;
   padding: 20px;
 }
 
+
+.decorated-zone::after,
+.decorated-zone::before {
+  content: "";
+  position: absolute;
+  width: 25px;
+  height: 25px;
+}
+
+.decorated-zone::before {
+  border-top: 1px solid var(--accent-color);
+  border-right: 1px solid var(--accent-color);
+  top: 20px;
+  right: 20px;
+}
+
+.decorated-zone::after {
+  border-bottom: 1px solid var(--accent-color);
+  border-left: 1px solid var(--accent-color);
+  bottom: 20px;
+  left: 20px;
+}
+
+
+.header__theme-menu {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
 
 .header__theme-menu-list {
   display: flex;
@@ -54,12 +85,21 @@
 
 
 .rec {
-  /* display: flex; */
   display: var(--display-rec);
-  align-items: center;
   position: absolute;
-  right: 20px;
-  gap: 5px;
+  right: 27px;
+  top: 24px;
+}
+
+.rec::after {
+  content: "";
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: var(--accent-color);
+    box-shadow: 0px 0px 4px 2px var(--accent-color);
+    margin-left: 10px;
 }
 
 .bulb {
@@ -70,40 +110,6 @@
   line-height: 18px;
   text-align: center;
 }
-
-.elips {
-  position: relative;
-  width: 9px;
-  height: 9px;
-  border-radius: 50%;
-  background-color: var(--accent-color);
-  box-shadow: 0px 0px 4px 2px var(--accent-color);
-}
-
-
-.corner {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 25px;
-  height: 25px;
-  
-}
-
-.corner__right {
-  border-top: 1px solid var(--bulb-color);
-  border-right: 1px solid var(--bulb-color);
-
-}
-
-.corner__left {
-  border-bottom: 1px solid var(--bulb-color);
-  border-left: 1px solid var(--bulb-color);
-  /* margin-left: 20px; */
-  margin-block-end: 20px;
-  margin-inline-start: 20px;
-}
-
 
 .cover {
   display: flex;
@@ -118,8 +124,8 @@
   font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
   /* padding-block-start: 273px; */
   padding-block-start: 256px;
+  margin-inline-start: -20px;
 }
-
 
 
 .title {
@@ -141,7 +147,18 @@
   background: var(--accent-color);
 }
 
+.container {
+  padding: 20px;
+}
 
+@media (width <=375px) {
+  .container {
+    padding: 10px;
+  }
+}
+
+
+/* 
 @media (width <=768px) {
   .decorated-zone {
     display: flex;
@@ -195,7 +212,7 @@
 .corner__left {
   margin-left: 10px;
 }
-}
+} */
 
 
 /* ---MAIN---

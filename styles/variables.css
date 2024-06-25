@@ -17,6 +17,6 @@
   --links-shadow-text-color: #FF0070;
   --menu-color:#FF0070;
   --background-image: url(../images/cover-image-dark.png);
-  --display-rec: flex;
+  --display-rec: block;
   
 }
