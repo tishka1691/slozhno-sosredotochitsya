@@ -4,61 +4,62 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="color-scheme" content="dark light">
+    <meta name="color-scheme" content="dark light" />
     <title>Сложно сосредоточиться</title>
-    <link rel="stylesheet" href="./fonts/fonts.css">
-    <link rel="stylesheet" href="./styles/globals.css">
-    <link rel="stylesheet" href="./styles/variables.css">
-    <link rel="stylesheet" href="./styles/style.css">
-    <link rel="stylesheet" href="./styles/dark.css">
-    <link rel="stylesheet" href="./styles/light.css">
-    <link rel="stylesheet" href="./scripts/script.js">
-    <link rel="icon" href="./images/favicon.ico" type="image/x-icon">
-    <link rel="icon" href="./images/favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="./fonts/fonts.css" />
+    <link rel="stylesheet" href="./styles/globals.css" />
+    <link rel="stylesheet" href="./styles/variables.css" />
+    <link rel="stylesheet" href="./styles/style.css" />
+    <link rel="stylesheet" href="./styles/dark.css" />
+    <link rel="stylesheet" href="./styles/light.css" />
+    <link rel="stylesheet" href="./scripts/script.js" />
+    <link rel="icon" href="./images/favicon.ico" type="image/x-icon" />
+    <link rel="icon" href="./images/favicon.svg" type="image/svg+xml" />
   </head>
-  <body class="page">
-    <header class="header corner">
+  <body>
+    <header class="header page">
+      <div class="container">
       <div class="decorated-zone">
-      <nav class="header__theme-menu">
-        <ul class="header__theme-menu-list">
-          <li class="header__theme-menu-item">
-            <button
-              class="header__theme-menu-button header__theme-menu-button_type_light"
-            >
-              День
-            </button>
-          </li>
-          <li class="header__theme-menu-item">
-            <button
-              class="header__theme-menu-button  header__theme-menu-button_type_auto"
-              disabled
-            >
-              Авто
-            </button>
-          </li>
-          <li class="header__theme-menu-item">
-            <button
-              class="header__theme-menu-button header__theme-menu-button_active"
-            >
-              Неон
-            </button>
-          </li>
-        </ul>
-      </nav>
-      <div class="rec">
-        <span class="bulb" aria-hidden="true">REC</span>
-        <span class="elips"></span>
+        <nav class="header__theme-menu">
+          <ul class="header__theme-menu-list">
+            <li class="header__theme-menu-item">
+              <button
+                class="header__theme-menu-button header__theme-menu-button_type_light"
+              >
+                День
+              </button>
+            </li>
+            <li class="header__theme-menu-item">
+              <button
+                class="header__theme-menu-button header__theme-menu-button_type_auto"
+                disabled
+              >
+                Авто
+              </button>
+            </li>
+            <li class="header__theme-menu-item">
+              <button
+                class="header__theme-menu-button header__theme-menu-button_active"
+              >
+                Неон
+              </button>
+            </li>
+          </ul>
+        </nav>
+        <div class="rec">
+          <span class="bulb" aria-hidden="true">REC</span>
+            <span class="corner corner__right">
+              <span class="elips"></span>
+            </span>
+        </div>
       </div>
-    </div>
       <h1 class="cover">no focus</h1>
       <p class="title-decor title">
         Что делать, когда не можешь делать ничего<br />
         Или почему нам так сложно сконцентрироваться, особенно когда очень надо
       </p>
-      <!-- <picture  class="">
-        <source srcset="../images/cover-image-dark.png"  type="png">
-        <source srcset="../images/cover-image.png" type="png">
-      </picture> -->
+      <div class="corner corner__left"></div>
+    <!-- </div> -->
     </header>
     <script src="./scripts/script.js"></script>
   </body>
