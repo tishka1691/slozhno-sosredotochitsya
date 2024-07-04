@@ -1,6 +1,14 @@
 .page {
   display: flex;
   flex-direction: column;
+  background-image: var(--background-image);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-color: var(--background-color);
+
+  
+
 
   /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
 }
@@ -10,10 +18,7 @@
 .header {
   height: 100%;
   width: 100%;
-  background-image: var(--background-image);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-attachment: fixed;
+  
 }
 
 .decorated-zone {
@@ -34,15 +39,15 @@
 }
 
 .decorated-zone::before {
-  border-top: 1px solid var(--accent-color);
-  border-right: 1px solid var(--accent-color);
+  border-top: 1px solid var(--bulb-color);
+  border-right: 1px solid var(--bulb-color);
   top: 20px;
   right: 20px;
 }
 
 .decorated-zone::after {
-  border-bottom: 1px solid var(--accent-color);
-  border-left: 1px solid var(--accent-color);
+  border-bottom: 1px solid var(--bulb-color);
+  border-left: 1px solid var(--bulb-color);
   bottom: 20px;
   left: 20px;
 }
@@ -110,6 +115,12 @@
   line-height: 18px;
   text-align: center;
 }
+/* .header__text {
+  padding: 274px 0 116px;
+  display: flex;
+  flex-direction: column;
+  gap: 114px;
+} */
 
 .cover {
   display: flex;
@@ -117,105 +128,352 @@
   font-weight: 700;
   line-height: 129.53px;
   text-align: left;
-  /* color: #db00ff; */
   color: var(--big-text-color);
-  /* text-shadow: 4px 4px 0 var(--accent-color); */
   text-shadow: 4px 4px 0 var(--shadow-big-text-color);
   font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
-  /* padding-block-start: 273px; */
-  padding-block-start: 256px;
+  padding-block-start: 276px;
   margin-inline-start: -20px;
 }
 
 
 .title {
-  inline-size: 48%;
   font-family: "IBM Plex Mono", sans-serif;
   font-size: 18px;
   font-weight: 700;
   line-height: 23.4px;
   text-align: left;
-  margin-block-start: 114px;
-  margin-left: auto;
-  margin-right: 20px;    
-  /* margin-block-end: 109px; */
-  margin-block-end: 89px;
+  
+}
+
+.title-decor-wrapper {
+margin-block-start: 114px;
+margin-block-end: 114px; 
+display: flex;
+width: clamp(355px, 50%, 491px);
+align-self: flex-end;
+line-height: 23.4px;
 }
 
 .title-decor {
-  color: var(--marker-color);
-  background: var(--accent-color);
+  color: var(--header-title-text);
+  background: var(--marker-color );
+  width: fit-content;
 }
 
 .container {
   padding: 20px;
 }
 
-@media (width <=375px) {
-  .container {
-    padding: 10px;
-  }
+.header__theme-menu-button:hover {
+  outline: 1px solid var(--hover-button-color);
+}
+
+.header__theme-menu-button:focus {
+  outline: none;
+}
+
+.header__theme-menu-button:focus-visible {
+  border-block-end: 1px solid var(--focus-color);
+}
+
+/* ---MAIN---*/
+
+.main_container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 80px;
+  padding-block: 60px;
+  padding-inline: 20px;
+}
+
+.section_1 {
+display: grid;
+grid-template-columns: 1fr 2fr;
+grid-template-rows: 1fr min-content;
+gap: 20px 10px;
+}
+
+.section-text-decor {
+  font-family: "IBM Plex Mono", sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 23.4px;
+  text-align: left;
+}
+
+.section-decor-subtitle-h4 {
+  font-weight: 400;
+  margin-block-start: 20px;
 }
 
 
-/* 
+.section-title {
+color: var(--section-title-text);
+}
+
+.section-text-position {
+  grid-row: span 2;
+}
+
+
+.section-subtitle {
+background-color: var(--marker-color); 
+color: var(--title-text);
+
+}
+
+.section-paragraph {
+  font-weight: 400;
+  padding-block-start: 10px;
+  color: var(--main-text);
+  
+}
+
+.text-link {
+  text-decoration: none;
+  text-shadow: 1px 2px 0 var(--links-shadow-text-color);
+}
+
+.text-link:hover {
+  border-block-end: 1px solid var(--hover-link-color);
+}
+
+.text-link:focus {
+  outline: none;
+}
+
+.text-link:focus-visible {
+  outline: 1px solid var(--focus-link-color);
+}
+
+
+.section_2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto auto;
+  gap: 20px;
+  }
+
+  .section_2-title {
+    grid-column: span 3;
+    width: 30%;
+  }
+
+  .section_2-block {
+    margin-block-start: -20px;
+  }
+
+  /*Picture*/
+
+  .section-picture {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto auto auto auto;
+    grid-template-areas:
+        "title title title"
+        "sunset sunset ice-cream"
+        "tape books ice-cream"
+        "tape street street";
+    width: 100%;
+    gap: 20px;
+}
+
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.title-section-picture {
+  grid-area: title;
+}
+
+.image__sunset {
+  grid-area: sunset;
+}
+
+.image__ice-cream {
+  grid-area: ice-cream;
+}
+
+.image__tape {
+  grid-area: tape;
+}
+
+.image__books {
+  grid-area: books;
+}
+
+.image__street {
+  grid-area: street;
+}
+
+
+
+  /*FOOTER*/
+  
+.footer {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  min-height: 84vh;
+  
+}
+
+.footer-title {
+  font-family: "IBM Plex Mono", sans-serif;
+font-size: 157px;
+font-weight: 700;
+line-height: 129.53px;
+text-align: left;
+  color: var(--big-text-color);
+  font-size: clamp(7.5rem, 0.75rem + 14.0625vw, 9.75rem);
+  text-shadow: 4px 4px 0px var(--shadow-big-text-color);
+}
+
+
+
+
+/*MEDIA*/
+
+/*header*/
+
 @media (width <=768px) {
-  .decorated-zone {
-    display: flex;
-    justify-content: end;
+ 
+  .decorated-zone::before {
+    top: 20px;
+    right: 0px;
   }
+ 
   .header__theme-menu {
+    justify-content: end;
     padding-top: 170px;
+    margin-inline-end: -20px;
   }
   .header__theme-menu-list {
     flex-direction: column;
+    gap: 15px;
   }
-.cover {
-  padding-block-start: 146px;
-  text-shadow: 4px 4px 0 var(--shadow-text-color);
-}
-.title {
-  margin-block-start: 145px;
-  inline-size: 47%;
-  margin-block-end: 140px;
-}
-}
 
+  .rec {
+    right: 9px;
+    top: 22px;
+  }
+
+.cover {
+  padding-block-start: 156px;
+  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  text-shadow: 4px 4px 0 var(--shadow-text-color);}
+
+  .title-decor-wrapper {
+    margin-block-start: 147px;
+    margin-block-end: 162px;
+    margin-inline-end: -20px;
+  }
+}
 
 @media (width <=375px) {
   .decorated-zone {
     display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
     padding: 10px;
   }
-  .header__theme-menu {
-    padding-top: 65px;
-  }
-  .header__theme-menu-list {
-    flex-direction: column;
-  }
-  .rec {
+
+  .decorated-zone::before {
+    top: 10px;
     right: 10px;
   }
+  
+  .decorated-zone::after {
+    bottom: 10px;
+    left: 10px;
+  }
+
+  .header__theme-menu {
+      display: flex;
+      align-items: flex-start;
+      justify-content: end;
+      padding-top: 65px;
+  }
+  .header__theme-menu-list {
+    flex-direction: column;
+  }
+
+  .rec {
+    right: 17px;
+    top: 15px;
+  }
+
+  
 .cover {
-  padding-block-start: 60px;
-  padding-inline-start: 10px;
   line-height: 82.5%;
   text-shadow: 4px 4px 0 var(--shadow-text-color);
+  font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+  margin-inline-start: -20px;
 }
-.title {
-  inline-size: 95%;
-  margin-block-start: 51px;
-  margin-left: auto;
-  margin-right: 10px;    
-  margin-block-end: 31px;
-}
+
+
+
 .corner__left {
   margin-left: 10px;
 }
-} */
+
+}
 
 
-/* ---MAIN---
-SECTION 1 */
+/*main*/
 
+@media (width <=768px) {
+  .main_container {
+    /* padding-block: 40px;
+    padding-inline-start: 20px;
+    gap: 50px; */
+    grid-template-columns: 236px 1fr;
+    padding-inline-start: 20px;
+    }
+
+    .section_2 {
+      display: inline;
+      width: 100%;
+      min-width: 724px;
+  }
+
+    .section_1 {
+      grid-template-columns: 315px 1fr;
+      row-gap: 20px;
+  }
+}
+
+
+@media (width <=375px) {
+  .main_container {
+    padding-block: 40px;
+    padding-inline: 10px;
+    gap: 50px;
+  }
+
+  .section_1{
+    grid-template-columns: 1fr;
+    row-gap: 24px;
+
+  }
+
+  .section_2 {
+    grid-template-columns: 1fr;
+  }
+
+}
+.section-picture {
+  display: block;
+  margin-block: 10px;
+  }
+
+
+/*footer*/
 

@@ -8,10 +8,11 @@
 .page.theme_dark {
 
   --accent-color: #FF0070;
-  --marker-color: #000028;
+  --marker-color: #FF0070;
   --main-text: #F1B2CE;
-  --title-text: #FF0070;
-  --hover-color: rgba(255, 0, 112, 0.4);
+  --header-title-text:  #000028; 
+  --hover-button-color: rgba(255, 0, 112, 0.4);
+  --hover-link-color: #F1B2CE;
   --big-text-color: #db00ff;
   --bulb-color: #FF0070;
   --shadow-big-text-color: #FF0070;
@@ -21,4 +22,8 @@
   --menu-color:#FF0070;
   --background-image: url(../images/cover-image-dark.png);
   --display-rec: block;
+  --focus-color: #FF0070;
+  --focus-link-color: #F1B2CE;
+  --section-title-text: #FF0070;
+  --background-color: #000028;
 }
