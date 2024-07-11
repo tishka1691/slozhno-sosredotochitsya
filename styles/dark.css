@@ -10,8 +10,8 @@
   --accent-color: #FF0070;
   --marker-color: #FF0070;
   --main-text: #F1B2CE;
-  --header-title-text:  #000028; 
-  --hover-button-color: rgba(255, 0, 112, 0.4);
+  --header-title-text:#000028;
+  --hover-button-color:rgba(255, 0, 112, 0.4);
   --hover-link-color: #F1B2CE;
   --big-text-color: #db00ff;
   --bulb-color: #FF0070;
@@ -25,5 +25,6 @@
   --focus-color: #FF0070;
   --focus-link-color: #F1B2CE;
   --section-title-text: #FF0070;
-  --background-color: #000028;
+  --background-color: #00183F;
+  --title-text: #000028;
 }
