@@ -56,7 +56,7 @@
 }
 
 .header__theme-menu-item {
-	font-family: "IBM Plex Mono", sans-serif;
+	font-family: var(--font-family);
 	font-size: 18px;
 	font-weight: 400;
 	line-height: 18px;
@@ -99,7 +99,7 @@
 
 .bulb {
 	color: var(--accent-color);
-	font-family: "IBM Plex Mono", sans-serif;
+	font-family: var(--font-family);
 	font-size: 18px;
 	font-weight: 400;
 	line-height: 18px;
@@ -114,7 +114,7 @@
 
 .cover {
 	display: flex;
-	font-family: "IBM Plex Mono", sans-serif;
+	font-family: var(--font-family);
 	font-weight: 700;
 	line-height: 129.53px;
 	text-align: left;
@@ -126,7 +126,7 @@
 
 
 .title {
-	font-family: "IBM Plex Mono", sans-serif;
+	font-family: var(--font-family);
 	font-size: 18px;
 	font-weight: 700;
 	line-height: 23.4px;
@@ -182,7 +182,7 @@
 }
 
 .section-text-decor {
-	font-family: "IBM Plex Mono", sans-serif;
+	font-family: var(--font-family);
 	font-size: 18px;
 	font-weight: 700;
 	line-height: 23.4px;
@@ -311,8 +311,7 @@
 }
 
 .footer-title {
-	font-family: "IBM Plex Mono", sans-serif;
-	font-size: 157px;
+	font-family: var(--font-family);
 	font-weight: 700;
 	line-height: 129.53px;
 	text-align: left;
