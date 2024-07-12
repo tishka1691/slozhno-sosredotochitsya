@@ -1,7 +1,6 @@
 .page {
 	display: flex;
 	flex-direction: column;
-	background-image: var(--background-image);
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-attachment: fixed;
@@ -12,11 +11,20 @@
 
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
 
+.offset {
+	padding: 20px;
+}
+
+.offset:not(:last-of-type) {
+	 margin-bottom: 60px; 
+	}
+
 .header {
+	position: relative;
 	height: 100%;
 	width: 100%;
 	padding: 20px;
-
+	background-image: var(--background-image);
 }
 
 
@@ -38,7 +46,7 @@
 .decorated-zone::after {
 	border-bottom: 1px solid var(--bulb-color);
 	border-left: 1px solid var(--bulb-color);
-	bottom: 154px;
+	bottom: 20px;
 	left: 20px;
 }
 
@@ -306,7 +314,7 @@
 	justify-content: center;
 	align-items: center;
 	padding: 20px;
-	min-height: 84vh;
+	height: 100vh;
 
 }
 
@@ -329,37 +337,26 @@
 
 
 @media (width <=768px) {
-	.header {
+
+	.offset {
 		padding: 10px;
+		padding-bottom: 62px;
 	}
 
-	.decorated-zone::before {
-		top: 20px;
-		right: 0px;
-	}
-
-	.decorated-zone::after {
-		bottom: 18px;
-	}
-
+	
 	.header__theme-menu {
 		justify-content: end;
 		padding-top: 180px;
-		margin-inline-end: -10px;
+		padding-inline-end: 10px;
 	}
 
 	.header__theme-menu-list {
 		flex-direction: column;
-		gap: 15px;
-	}
-
-	.rec {
-		right: 9px;
-		top: 22px;
+		gap: 13px;
 	}
 
 	.cover__container {
-		padding: 157px 0 116px;
+		padding: 161px 0 116px;
 	}
 
 	.cover {
@@ -367,16 +364,19 @@
 		text-shadow: 4px 4px 0 var(--shadow-text-color);
 		padding-inline-start: 10px;
 	}
+	
 
 	.title-decor-wrapper {
-		margin-block-start: 147px;
-		margin-inline-end: -10px;
+		margin-block-start: 146px;
+		margin-inline-end: 10px;
+		width: 364px;
 	}
 
 	.main_container {
-		padding-block-start: 115px;
-		padding-inline: 0;
-		padding-inline-start: 19px;
+		padding-block-start: 63px;
+        margin-left: 10px;
+        margin-right: 10px;
+		
 	}
 
 	.section_1 {
@@ -391,47 +391,58 @@
 	}
 
 	.footer {
-		min-height: 98vh;
-		padding-inline-start: 36px;
-		padding-block-start: 21px;
+		position: relative;
+		padding-block-start: 55px;
 	}
 
 }
 
 
 @media (width <=375px) {
-	.rec {
-		right: 6px;
-		top: 14px;
-	}
 
 	.decorated-zone::before {
 		top: 10px;
-		right: 0;
+		right: 10px;
 	}
+	
+	.decorated-zone::after {
+		bottom: 10px;
+		left: 10px;
+	}
+	.rec {
+	
+		right: 17px;
+		top: 14px;
+	}
+	
 
 	.header__theme-menu {
-		padding-top: 63px;
-		margin-inline-end: 7px;
+        padding-top: 64px;
+        margin-inline-end: -10px;
 	}
 
+
 	.cover__container {
-		padding: 64px 0px 0px;
+		padding: 68px 0px 2px;
 
 	}
 
 	.cover {
-		padding-inline-start: 0;
+		padding-inline-start: 20px;
 		line-height: 82.5%;
 	}
 
 	.title-decor-wrapper {
-		margin-block-start: 0;
+		margin-block-start: 55px;
 		margin-inline-end: 0;
+		width: 355px;
 	}
 
 	.main_container {
-		padding-inline-start: 4px;
+
+	gap: 0;
+	padding-block: 42px;
+	padding-inline: 0;
 	}
 
 	.section_1 {
@@ -439,9 +450,19 @@
 		flex-direction: column;
 	}
 
+	.section_2-title {
+		width: 90%;
+		padding-block-start: 50px;
+	}
+
+	.section_2 {
+        padding-block-end: 50px;
+	}
+
 	.section-picture {
 		display: flex;
 		flex-direction: column;
 		gap: 10px;
+		padding-block-start: 70px;
 	}
 }
