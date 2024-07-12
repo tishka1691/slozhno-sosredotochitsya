@@ -29,3 +29,7 @@
   --title-text: #000028;
   --font-family: "IBM Plex Mono", "monospace";
 }
+
+.page {
+  background-image: var(--background-image);
+}
