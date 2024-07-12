@@ -4,7 +4,8 @@
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-attachment: fixed;
-	/* background-color: var(--background-color); */
+	background-color: var(--background-color);
+	background-image: var(--background-image);
 
 	/* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
 }
