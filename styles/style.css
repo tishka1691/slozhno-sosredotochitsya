@@ -16,17 +16,17 @@
 }
 
 .offset:not(:last-of-type) {
-	 margin-bottom: 60px;
-	}
+	margin-bottom: 60px;
+}
 
 .header {
 	display: grid;
 	position: relative;
 	grid-template-rows: 1fr auto;
 	padding: 20px;
-	min-height: 100vh;
+	height: 100vh;
 	min-height: 668px;
-  }
+}
 
 
 .decorated-zone::after,
@@ -116,7 +116,6 @@
 }
 
 
-
 .cover__container {
 	display: flex;
 	flex-direction: column;
@@ -149,10 +148,8 @@
 	justify-content: end;
 	font-weight: 700;
 	background-size: cover;
-	font-size: var(--main-font-size);
 	font-family: var(--font-family);
 	font-size: 18px;
-	font-weight: 700;
 	line-height: 23.4px;
 	text-align: left;
 }
@@ -174,7 +171,6 @@
 }
 
 
-
 /* ---MAIN---*/
 
 .main_container {
@@ -191,7 +187,6 @@
 	grid-template-columns: 1fr 2fr;
 	grid-template-rows: 1fr min-content;
 	gap: 20px 10px;
-	display: grid;
 }
 
 
@@ -264,7 +259,7 @@
 .section_vertical-block {
 	margin-block-start: -20px;
 	margin-block-end: 20px;
-} 
+}
 
 /*Picture*/
 
@@ -272,7 +267,7 @@
 .section-picture {
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr;
-	grid-template-rows: auto auto auto ;
+	grid-template-rows: auto auto auto;
 	grid-template-areas:
 		"sunset sunset ice-cream"
 		"tape books ice-cream"
@@ -307,9 +302,7 @@
 
 .image__street {
 	grid-area: street;
-} 
-
- 
+}
 
 
 /*FOOTER*/
@@ -349,7 +342,7 @@
 		padding-bottom: 62px;
 	}
 
-	
+
 	.header__theme-menu {
 		justify-content: end;
 		padding-top: 180px;
@@ -363,7 +356,7 @@
 
 	.cover__container {
 		padding: 162px 0 61px;
-        gap: 113px;
+		gap: 113px;
 	}
 
 	.cover {
@@ -371,7 +364,7 @@
 		text-shadow: 4px 4px 0 var(--shadow-text-color);
 		padding-inline-start: 10px;
 	}
-	
+
 
 	.title-decor-wrapper {
 		margin-block-start: 32px;
@@ -382,9 +375,9 @@
 
 	.main_container {
 		padding-block-start: 60px;
-        margin-left: 10px;
-        margin-right: 10px;
-		
+		margin-left: 10px;
+		margin-right: 10px;
+
 	}
 
 	.section_horizontal {
@@ -412,29 +405,30 @@
 		top: 10px;
 		right: 10px;
 	}
-	
+
 	.decorated-zone::after {
 		bottom: 10px;
 		left: 10px;
 	}
+
 	.rec {
-	
+
 		right: 17px;
 		top: 14px;
 	}
-	
+
 
 	.header__theme-menu {
-        padding-top: 64px;
-        margin-inline-end: -10px;
+		padding-top: 64px;
+		margin-inline-end: -10px;
 	}
 
 
 	.cover__container {
 		display: flex;
-        flex-direction: column;
+		flex-direction: column;
 		padding: 0;
-        gap: 58px;
+		gap: 58px;
 
 	}
 
@@ -442,23 +436,23 @@
 		padding-inline-start: 0;
 		line-height: 82.5%;
 		margin-inline-start: 0;
-       
+
 	}
 
 	.title-decor-wrapper {
-	display: flex;
-    width: clamp(355px, 50%, 491px);
-    align-self: flex-end;
-    margin: auto 0;
-    line-height: 23.4px;
+		display: flex;
+		width: clamp(355px, 50%, 491px);
+		align-self: flex-end;
+		margin: auto 0;
+		line-height: 23.4px;
 	}
 
 	.main_container {
 
-	gap: 0;
-	padding-block-start: 40px;
-    padding-block-end: 11px;
-	padding-inline: 0;
+		gap: 0;
+		padding-block-start: 40px;
+		padding-block-end: 11px;
+		padding-inline: 0;
 	}
 
 	.section_horizontal {
@@ -472,7 +466,7 @@
 	}
 
 	.section_vertical {
-        padding-block-end: 50px;
+		padding-block-end: 50px;
 	}
 
 	.section-picture {
@@ -480,7 +474,7 @@
 		flex-direction: column;
 		gap: 10px;
 		padding-block-start: 10px;
-        padding-block-end: 29px;
+		padding-block-end: 29px;
 	}
 
 	.section_vertical-block {
