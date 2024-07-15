@@ -40,3 +40,9 @@ a {
   font-size: inherit;
   line-height: inherit;
 }
+
+.none-style {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
